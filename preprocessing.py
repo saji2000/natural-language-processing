@@ -10,3 +10,15 @@ all_negative_tweets = twitter_samples.strings('negative_tweets.json')
 
 print("Number of positive tweets:", len(all_positive_tweets))
 print("Number of negative tweets:", len(all_negative_tweets))
+
+fig = plt.figure(figsize=(5, 5))
+
+labels = 'Positive', 'Negative'
+
+sizes = [len(all_positive_tweets), len(all_negative_tweets)]
+
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+
+plt.axis('equal')
+
+plt.show()
